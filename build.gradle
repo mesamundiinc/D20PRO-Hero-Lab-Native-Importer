@@ -1,0 +1,41 @@
+apply plugin: 'java'
+
+version = '0.8'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+def jarLocation = 'build/libs/D20PRO-Hero-Lab-Native-Importer-' + version + ".jar"
+def targetDir = targetD20PRODir + '/judge/addon/creature'
+
+jar {
+	manifest {
+        attributes 'Implementation-Title': 'D20PRO Importer for Hero Lab portfolios',  
+        	'Implementation-Version': version,
+        	'Built-By': 'Mesa Mundi, Inc',
+			'Fac1': 'com.mesamundi.d20pro.herolabnative.CommandFactoryImpl'
+    }
+}
+
+//Get dependencies from Maven central repository
+repositories {
+    mavenCentral()
+	flatDir {
+       dirs targetD20PRODir, targetD20PRODir + '/lib'
+   }
+}
+
+//Project dependencies
+dependencies {
+	compile name: 'D20PRO'
+}
+
+task buildAndCopyJarToD20PRO(type: Copy) {
+	assert file(targetD20PRODir).isDirectory()
+
+	from jarLocation
+	into targetDir
+
+    println 'Copied ' + jarLocation + ' to: ' + targetDir
+}
+
+buildAndCopyJarToD20PRO.dependsOn jar
