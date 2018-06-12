@@ -2,6 +2,12 @@
 A native Hero Lab .por importer tool for D20PRO Virtual Tabletop.
 
 ## Setup
+Working with this project requires a basic fluency with Gradle. This includes installing it locally and then 
+* Running tasks from the command line like `gradle compile`
+* Importing the project into and triggering tasks from an IDE like IntelliJ. 
+ 
+Please go here if you are new to Gradle: https://gradle.org/guides/
+
 Create a `gradle.properties` file in the working directory and populate it with the following line:
 ```
 targetD20PRODir=D:/apps/d20Pro3.7.3
