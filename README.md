@@ -23,4 +23,10 @@ First set up the `gradle.properties` as directed above. If a valid `targetD20PRO
 
 After making any code changes, run the `buildAndCopyJarToD20PRO` task. This task will compile the code, build the .jar, and copy it to the specified D20PRO installation.
 
-There is no need to restart D20PRO after rebuilding the import JAR. Simply start the creature import process again and it will hotswap in the latest code.  
+There is no need to restart D20PRO after rebuilding the import JAR. Simply start the creature import process again and it will hotswap in the latest code.
+  
+## Advanced Debugging
+_Under Construction_
+
+While some amount of "guerilla debugging" is expected, it is extraordinarily likely a full fledged debugger will be needed.
+Instructions for launching D20PRO and remotely attach a debugger are on their way.  
