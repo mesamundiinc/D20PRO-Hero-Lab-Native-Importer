@@ -20,8 +20,8 @@ jar {
 repositories {
     mavenCentral()
 	flatDir {
-       dirs targetD20PRODir, targetD20PRODir + '/lib'
-   }
+       dirs sourceD20PRODir, sourceD20PRODir + '/lib'
+	}
 }
 
 //Project dependencies

@@ -1,3 +1,4 @@
 # Make a copy of this file and name it gradle.properties.
-# Supply the absolute path and make sure to use slash (/) and not backslash (\).
+# Supply the absolute paths and make sure to use slash (/) and not backslash (\).
+sourceD20PRODir=C:/Program Files/MesaMundi/d20Pro
 targetD20PRODir=C:/Program Files/MesaMundi/d20Pro
