@@ -27,6 +27,8 @@ repositories {
 //Project dependencies
 dependencies {
 	compile name: 'D20PRO'
+	compile name: 'log4j-1.2.17'
+	compile name: 'sengent-common'
 }
 
 task buildAndCopyJarToD20PRO(type: Copy) {
