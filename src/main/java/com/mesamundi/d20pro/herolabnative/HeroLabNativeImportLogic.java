@@ -55,7 +55,7 @@ public final class HeroLabNativeImportLogic {
     _doc = loadDocument(data);
 
     CreatureTemplate ctr = new CreatureTemplate();
-    ctr.setModuleName("Hero Lab Native");
+    ctr.setModuleName(HeroLabNativeImporter.TITLE);
 
     applyExtractors(ctr);
 

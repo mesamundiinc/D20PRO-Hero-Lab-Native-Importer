@@ -36,9 +36,11 @@ import com.sengent.common.control.exception.VerificationException;
 public class HeroLabNativeImporter implements ImportCreaturePlugin {
   private static final Logger lg = Logger.getLogger(HeroLabNativeImporter.class);
 
+  public static final String TITLE = "Hero Lab Portfolio";
+
   @Override
   public String getPluginName() {
-    return "Hero Lab Native";
+    return TITLE;
   }
 
   @Override
@@ -193,7 +195,7 @@ public class HeroLabNativeImporter implements ImportCreaturePlugin {
   private class HeroLabNativeCreatureView extends DMCreatureView {
 
     HeroLabNativeCreatureView(DM dm, CreatureInPlay mob) {
-      super(dm, mob, "Hero Lab Native Importer");
+      super(dm, mob, "Imported Hero Lab" );
     }
   }
 
