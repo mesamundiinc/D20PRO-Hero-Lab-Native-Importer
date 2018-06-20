@@ -10,9 +10,10 @@ Please go here if you are new to Gradle: https://gradle.org/guides/
 
 Create a `gradle.properties` file in the working directory and populate it with the following line:
 ```
+sourceD20PRODir=D:/apps/d20Pro3.7.3
 targetD20PRODir=D:/apps/d20Pro3.7.3
 ```
-where `targetD20PRODir` is where you have installed D20PRO. This property is used to:
+where `sourceD20PRODir` and `targetD20PRODir` are where you have installed D20PRO. These properties are used to:
 1. find the `D20PRO.jar` and other dependencies needed to compile the JAR. 
 2. deploy the import .jar to the proper location in `judge\addon\creature`.
   
@@ -28,5 +29,5 @@ There is no need to restart D20PRO after rebuilding the import JAR. Simply start
 ## Advanced Debugging
 _Under Construction_
 
-While some amount of "guerilla debugging" is expected, it is extraordinarily likely a full fledged debugger will be needed.
+While some amount of "guerrilla debugging" is expected, it is extraordinarily likely a full fledged debugger will be needed.
 Instructions for launching D20PRO and remotely attach a debugger are on their way.  
