@@ -29,6 +29,7 @@ dependencies {
 	compile name: 'D20PRO'
 	compile name: 'log4j-1.2.17'
 	compile name: 'sengent-common'
+	compile name: 'jackson-core-2.7.1'
 }
 
 task buildAndCopyJarToD20PRO(type: Copy) {
