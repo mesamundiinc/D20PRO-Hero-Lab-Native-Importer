@@ -14,9 +14,6 @@ import static com.d20pro.plugin.api.XMLToDocumentHelper.peekMapData;
 import static com.d20pro.plugin.api.XMLToDocumentHelper.xpath;
 import static com.mesamundi.d20pro.herolabnative.HeroLabNativeImportLogic.characterPath;
 
-/**
- * Created by Mat on 10/25/2017.
- */
 public class ExtractArmorClass implements Extractor {
   private static final Logger lg = Logger.getLogger(ExtractArmorClass.class);
 
@@ -35,7 +32,6 @@ public class ExtractArmorClass implements Extractor {
     int fromdex = pluck.apply("fromdexterity");
     int fromsize = pluck.apply("fromsize");
     int unarmored = pluck.apply("unarmored");
-    int maxdexbonus = pluck.apply("maxdexbonus");
     int fromshield = pluck.apply("fromshield");
     int fromnatural = pluck.apply("fromnatural");
     int fromdeflect = pluck.apply("fromdeflect");
@@ -53,6 +49,6 @@ public class ExtractArmorClass implements Extractor {
             (byte) fromdodge
     };
     nug.ctr.setAC(ac);
-    nug.ctr.setMaxDexBonus((short) maxdexbonus);
+    /* note: maxDexBonus is set in com.mesamundi.d20pro.herolabnative.ext.ExtractPenalties */
   }
 }
