@@ -7,6 +7,7 @@ import com.mesamundi.d20pro.herolabnative.ChildrenExtractor;
 import com.mindgene.d20.common.creature.CreatureTemplate;
 
 import static com.mesamundi.d20pro.herolabnative.arc.NamedItemArc.namedValue;
+import static com.mesamundi.d20pro.herolabnative.util.HLConst.MAX_VAL;
 import static com.mesamundi.d20pro.herolabnative.util.ValueParser.parseShort;
 
 /**
@@ -22,7 +23,13 @@ public class ExtractPenalties extends ChildrenExtractor {
   @Override
   public void accept(Node node, CreatureTemplate ctr) {
     String name = namedValue(node, "name");
-    short value = parseShort(namedValue(node, "value"));
+    String rawValue = namedValue(node, "value");
+    if(MAX_VAL.equals(rawValue)) {
+      lg.trace("Ignoring penalty: " + name + " with magic value: " + MAX_VAL);
+      return;
+    }
+
+    short value = parseShort(rawValue);
     switch (name) {
       case "Armor Check Penalty": // TODO: 10/25/2017 inject armor check penalty
         String todo = "Ignoring: Armor Check Penalty";
